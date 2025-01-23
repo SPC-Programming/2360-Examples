@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "J:\\2360-code-examples\\WeekOne\\WeekOne.csproj",
+      "projectUniqueName": "J:\\2360-code-examples\\645\\WeekOne\\WeekOne.csproj",
       "projectName": "WeekOne",
-      "projectPath": "J:\\2360-code-examples\\WeekOne\\WeekOne.csproj",
+      "projectPath": "J:\\2360-code-examples\\645\\WeekOne\\WeekOne.csproj",
       "packagesPath": "J:\\NuGet",
-      "outputPath": "J:\\2360-code-examples\\WeekOne\\obj\\",
+      "outputPath": "J:\\2360-code-examples\\645\\WeekOne\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config",
