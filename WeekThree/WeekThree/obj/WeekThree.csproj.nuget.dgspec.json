@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "j:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj": {}
+    "J:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj": {}
   },
   "projects": {
-    "j:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj": {
+    "J:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "j:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj",
+        "projectUniqueName": "J:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj",
         "projectName": "WeekThree",
-        "projectPath": "j:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj",
+        "projectPath": "J:\\2360-code-examples\\645\\WeekThree\\WeekThree\\WeekThree.csproj",
         "packagesPath": "J:\\NuGet",
-        "outputPath": "j:\\2360-code-examples\\645\\WeekThree\\WeekThree\\obj\\",
+        "outputPath": "J:\\2360-code-examples\\645\\WeekThree\\WeekThree\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config",
