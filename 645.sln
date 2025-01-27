@@ -6,10 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekOne", "WeekOne\WeekOne.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekTwo", "WeekTwo\WeekTwo.csproj", "{B64365DC-F651-CD01-AC5D-6C0EBDD4F430}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeekThree", "WeekThree", "{2EE5CC3D-11FF-F60E-498F-EE7E6FA1FF0D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeekThree", "WeekThree\WeekThree.csproj", "{2EE5CC3D-11FF-F60E-498F-EE7E6FA1FF0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekThree", "WeekThree\WeekThree\WeekThree.csproj", "{6280FCB6-0D53-AE0B-4F8F-FBF5E43D8F06}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
