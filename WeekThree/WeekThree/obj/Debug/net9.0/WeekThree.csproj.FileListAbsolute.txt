@@ -1,0 +1,15 @@
+j:\2360-code-examples\645\WeekThree\WeekThree\bin\Debug\net9.0\WeekThree.exe
+j:\2360-code-examples\645\WeekThree\WeekThree\bin\Debug\net9.0\WeekThree.deps.json
+j:\2360-code-examples\645\WeekThree\WeekThree\bin\Debug\net9.0\WeekThree.runtimeconfig.json
+j:\2360-code-examples\645\WeekThree\WeekThree\bin\Debug\net9.0\WeekThree.dll
+j:\2360-code-examples\645\WeekThree\WeekThree\bin\Debug\net9.0\WeekThree.pdb
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.GeneratedMSBuildEditorConfig.editorconfig
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.AssemblyInfoInputs.cache
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.AssemblyInfo.cs
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.csproj.CoreCompileInputs.cache
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.sourcelink.json
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.dll
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\refint\WeekThree.dll
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.pdb
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\WeekThree.genruntimeconfig.cache
+j:\2360-code-examples\645\WeekThree\WeekThree\obj\Debug\net9.0\ref\WeekThree.dll
