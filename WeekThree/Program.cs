@@ -1,4 +1,8 @@
-﻿
+﻿/*
+James Vernon
+
+COP 2360 WeekThree examples - 1
+*/
 namespace WeekThree;
 
 class Program
@@ -28,7 +32,7 @@ class Program
         foreach (char c in multiLine)
         {
             
-            Console.WriteLine($"Char pos {i++} \t char:{c} \t char code:{c.ToString()} ");
+            Console.WriteLine($"Char pos {i++} \t char:{((short)c)} \t char code:{c.ToString()} ");
         }
     }
 }
