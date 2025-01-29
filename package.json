@@ -1,1 +1,10 @@
-{}
+{
+    "contributes": {
+        "themes": [
+            {
+                "lablel": "Teaching Theme",
+                "path": "./cs-teaching-colors/cs-color-style-color-theme.json"
+            }
+        ]
+    }
+}
