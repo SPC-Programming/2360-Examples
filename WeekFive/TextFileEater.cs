@@ -1,4 +1,7 @@
 ﻿
+using System.Collections;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace WeekFive;
 /**
@@ -30,7 +33,14 @@ class TextFileEater
         /// Then create a TextFileInfo object
         /// Loop through the commands that are available
         /// Quit when user tells us too
-        Console.WriteLine("Hello, World!");
+        string path = @"J:\2360-code-examples\645\WeekFive\raven.txt";
+        if (File.Exists(path))
+        {
+            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            TextEaterInfo te = new TextEaterInfo(fs);
+            fs.Close();
+            te.PrintContents();
+        }
     }
 
 }
@@ -42,39 +52,75 @@ enum CharType
     /// </summary>
     UPPER, //0
     LOWER,//1
-    PUNCTATION,//2
-    WHITE_SPACE//3
+    PUNCTUATION,//2
+    WHITE_SPACE,//3
+
+    UNKNOWN
+
 }
 class CharCount
 {
-    private char _theChar;
-    private int count = 0;
-    public CharCount(char theChar)
-    {
-        count++;
-    }
-    public char GetChar { get { return _theChar; } }
-    public int Count { get { return count; } }
+    private readonly char _charInstance;
+    private int _charCount;
 
-    public void addOne()
+    private CharType _charType;
+
+    public CharCount(char c)
     {
-        count++;
+
+        _charInstance = c;
+        _charCount = 1;
+
+        if (char.IsUpper(_charInstance))
+        {
+            _charType = CharType.UPPER;
+        }
+        else if (char.IsLower(_charInstance))
+        {
+            _charType = CharType.LOWER;
+        }
+        else if (char.IsPunctuation(_charInstance))
+        {
+            _charType = CharType.PUNCTUATION;
+        }
+        else if (char.IsWhiteSpace(_charInstance))
+        {
+            _charType = CharType.WHITE_SPACE;
+        }
+        else
+        {
+            _charType = CharType.UNKNOWN;
+        }
     }
+
+    public CharType GetCharType { get { return _charType; } }
+
+    public char GetChar { get { return _charInstance; } }
+
+    public int GetCount { get { return _charCount; } }
+
+    public void AddCount()
+    {
+        ++_charCount;
+    }
+
 
 }
 
+
+
 class TextEaterInfo
 {
+    private int _lineNumber = 0;
+    private int _colPos = 0;
+    private CharCount _currentChar;
+    private List<CharCount> _allText = new List<CharCount>();
+    private List<CharCount> _lowers = new List<CharCount>();
+    private List<CharCount> _highers = new List<CharCount>();
+    private Dictionary<char, int> _punctuations = new Dictionary<char, int>();
 
-    private char _currByte;
-    private CharType _currByteType;
-
-    private CharCount[] _upperLetters;
-    private CharCount[] _lowerLetters;
-
-    private List<char> _puncations;
-
-    private List<char> _whiteSpaces;
+    private CharCount[]? _whiteSpaces;
+    private char[][]? docMap;
 
     public TextEaterInfo(FileStream openFile)
     {
@@ -84,41 +130,29 @@ class TextEaterInfo
 
         do
         {
-            _currByte = (char)openFile.ReadByte();
-
-            if (Char.IsUpper(_currByte))
+            _currentChar = new((char)openFile.ReadByte());
+            CharCount inList = _allText.Find(c => c.GetChar.Equals(_currentChar.GetChar));
+            if (inList == null)
             {
-                _currByteType = CharType.UPPER;
-                addToArray(_currByte);
+                _allText.Add(_currentChar);
             }
-            else if (Char.IsLower(_currByte))
+            else
             {
-                _currByteType = CharType.LOWER;
-            }
-            else if (Char.IsPunctuation(_currByte))
-            {
-                _currByteType = CharType.PUNCTATION;
-            }
-            else if (Char.IsWhiteSpace(_currByte))
-            {
-                _currByteType = CharType.WHITE_SPACE;
+                inList.AddCount();
             }
 
-
-        } while (openFile.CanRead);
+        } while (openFile.Length != openFile.Position);
+      
 
     }
-    private void addToArray(CharCount c)
+    public void PrintContents()
     {
-        if (_currByteType == CharType.UPPER)
+        foreach (CharCount c in _allText)
         {
-            if (_upperLetters != null)
-            {
-                _upperLetters = new char[25];
-            }
-
+            Console.WriteLine($"Char: {c.GetChar}, Type: {c.GetCharType}, count: {c.GetCount}");
         }
-
     }
+
 }
+
 
